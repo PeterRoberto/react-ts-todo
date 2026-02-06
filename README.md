@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# TODO React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Aplicação de tarefas (TODO) construída com React, TypeScript, Vite e Tailwind CSS.
 
-Currently, two official plugins are available:
+## Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é um projeto simples de lista de tarefas (TODO) para estudar e demonstrar uma stack moderna com:
 
-## React Compiler
+- React + TypeScript
+- Vite (bundler/development)
+- Tailwind CSS (estilização)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo é servir como um exemplo leve e produzido para aprender boas práticas com TypeScript em React e setup com Vite.
 
-## Expanding the ESLint configuration
+## Recursos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Adicionar, editar e remover tarefas
+- Marcar tarefas como concluídas
+- Persistência local (LocalStorage)
+- Estilização responsiva com Tailwind
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Pré-requisitos
+
+- Node.js 16+ e npm ou yarn
+
+## Como usar (desenvolvimento)
+
+1. Instale dependências:
+
+```bash
+npm install
+# ou
+yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Rode o servidor de desenvolvimento:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+# ou
+yarn dev
 ```
+
+3. Abra http://localhost:5173 (ou a porta indicada no terminal).
+
+## Build para produção
+
+yarn build
+# TODO — React + TypeScript (simples)
+
+Projeto de lista de tarefas criado com uma stack moderna.
+
+Tecnologias usadas:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+Como abrir o projeto na sua máquina:
+
+Pré-requisitos: Node.js 16+ e npm ou yarn
+
+```bash
+# clonar (ou copiar) o repositório
+git clone <URL-DO-REPO>
+cd todo_react_typescript
+
+# instalar dependências
+npm install
+# ou
+yarn
+
+# rodar em desenvolvimento
+npm run dev
+# ou
+yarn dev
+
+# abrir no navegador: http://localhost:5173
+```
+
+Build de produção:
+
+```bash
+npm run build
+npm run preview
+```
+
